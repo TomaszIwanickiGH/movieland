@@ -7,9 +7,9 @@ import { styles } from './constants'
 const App = () => {
   return (
     <div className={`${styles.padding} bg-primary`}>
-      <div className="flex gap-12">
+      <div className="flex lg:flex-row flex-col gap-8">
         <Navbar />
-        <div>
+        <div className="w-full">
           <SearchBar />
           <Routes>
             <Route path="/" element={<HomeWrapper />} />
