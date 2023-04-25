@@ -6,14 +6,14 @@ const Navbar = () => {
   return (
     <nav className="flex lg:flex-col flex-row justify-between bg-darkBlue rounded-lg lg:w-fit p-6">
       <Link to="/">
-        <img src={images.logo} alt="logo" className="sm:w-[40px] w-[30px] sm:h-[40px] h-[30px]" />
+        <img src={images.logo} alt="logo" className="sm:w-[40px] w-[30px] sm:h-[35px] h-[30px]" />
       </Link>
 
       <ul className="flex lg:flex-col flex-row list-none sm:gap-10 gap-8 items-center lg:mt-16">
         {utils.map((nav) => (
           <Link key={nav.path} to={nav.path}>
             <li className="hover:opacity-90">
-              <img src={nav.image} alt="nav-link" />
+              <img src={nav.image} alt="nav-link" className="" />
             </li>
           </Link>
         ))}
