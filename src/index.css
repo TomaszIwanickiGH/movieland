@@ -11,3 +11,28 @@
   scroll-behavior: smooth;
   font-family: 'Outfit', sans-serif;
 }
+
+.button-opacity {
+  background: rgba(151, 151, 151, 0.4);
+}
+
+.show-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#trending:hover .show-button {
+  display: flex;
+}
+
+.scrollbar {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
