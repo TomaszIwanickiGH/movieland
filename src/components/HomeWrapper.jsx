@@ -3,7 +3,7 @@ import { Trending, Recommended } from './index'
 
 const HomeWrapper = () => {
   return (
-    <div>
+    <div className="md:mt-[-1rem] mt-4">
       <Trending />
       <Recommended />
     </div>
