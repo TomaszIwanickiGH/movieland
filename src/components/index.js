@@ -8,5 +8,6 @@ import Bookmarked from './Bookmarked'
 import HomeWrapper from './HomeWrapper'
 import BookmarkedMovies from './BookmarkedMovies'
 import BookmarkedTvSeries from './BookmarkedTvSeries'
+import Card from './Card'
 
-export { Navbar, SearchBar, Trending, Recommended, Movies, TvSeries, Bookmarked, HomeWrapper, BookmarkedMovies, BookmarkedTvSeries }
+export { Navbar, SearchBar, Trending, Recommended, Movies, TvSeries, Bookmarked, HomeWrapper, BookmarkedMovies, BookmarkedTvSeries, Card }
