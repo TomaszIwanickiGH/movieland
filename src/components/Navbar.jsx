@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { images, utils } from '../constants'
 import { Link } from 'react-router-dom'
 
+import LogoConverter from './LogoConverter'
+
 const Navbar = () => {
+  const [active, setActive] = useState(1)
+
   return (
     <nav className="flex lg:flex-col flex-row justify-between items-center bg-darkBlue rounded-lg lg:w-fit xl:min-w-[100px] p-6 lg:h-[90vh]">
       <Link to="/">
@@ -12,8 +16,13 @@ const Navbar = () => {
       <ul className="flex lg:flex-col flex-row list-none sm:gap-10 gap-8 items-center lg:mt-[-8rem]">
         {utils.map((nav) => (
           <Link key={nav.path} to={nav.path}>
-            <li className="hover:opacity-90">
-              <img src={nav.image} alt="nav-link" className="" />
+            <li
+              className="hover:opacity-50"
+              onClick={() => {
+                setActive(nav.id)
+              }}
+            >
+              <LogoConverter {...nav} fill={active === nav.id ? '#fff' : '#5A698F'} />
             </li>
           </Link>
         ))}
