@@ -1,11 +1,10 @@
 import React from 'react'
-import { BookmarkedMovies, BookmarkedTvSeries } from './index'
+import { BookmarkedMovies } from './index'
 
 const Bookmarked = () => {
   return (
     <div>
       <BookmarkedMovies />
-      <BookmarkedTvSeries />
     </div>
   )
 }
