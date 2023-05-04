@@ -5,16 +5,15 @@ const Card = ({ image, title, category, year, rating, isMarked }) => {
   const [toggle, setToggle] = useState(isMarked)
   return (
     <div id="trending" className={`flex flex-col gap-2 md:w-[280px] w-[164px] hover:cursor-pointer`}>
-      <div className="relative">
+      <div className="relative card-bg">
         <img src={image} className="md:w-[280px] w-[164px] md:h-[174px] h-[110px] rounded-md card-bg" />
+        <div id="show" className="hidden show-button">
+          <div className="flex items-center justify-center bg-lightGray rounded-3xl button-opacity">
+            <img src={images.iconPlay} alt="play" />
+          </div>
+        </div>
         <div className="flex items-center justify-center bg-black hover:bg-lightGray hover:opacity-100 opacity-60 rounded-full w-[32px] h-[32px] absolute top-[10px] right-[10px]" onClick={() => setToggle(!toggle)}>
           <img src={toggle ? images.iconBookmarkFull : images.iconBookmarkEmpty} alt="" className="w-[11px] h-[14px]" />
-        </div>
-        <div id="show" className="hidden show-button">
-          <div className="flex items-center justify-center bg-lightGray rounded-3xl w-[120px] h-[50px] gap-4 button-opacity">
-            <img src={images.iconPlay} alt="play" />
-            <p className="text-white font-[600]">Play</p>
-          </div>
         </div>
       </div>
 
