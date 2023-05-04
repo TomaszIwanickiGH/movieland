@@ -6,7 +6,7 @@ import { styles } from './constants'
 
 const App = () => {
   return (
-    <div className={`${styles.padding} bg-primary`}>
+    <div className={`${styles.padding} bg-primary h-[100vh]`}>
       <div className="flex lg:flex-row flex-col gap-8">
         <Navbar />
         <div className="w-full">
