@@ -6,6 +6,8 @@ import { Card } from '../components'
 
 import { useSelector } from 'react-redux'
 
+import { motion } from 'framer-motion'
+
 const BookmarkedMovies = () => {
   const search = useSelector((state) => state.search)
 
@@ -19,7 +21,9 @@ const BookmarkedMovies = () => {
 
   return (
     <section className={`${styles.paddingSmall} flex flex-col gap-6 relative mt-4 md:mt-0`}>
-      <h2 className="text-white text-[32px] font-[500]">Bookmarked Movies</h2>
+      <motion.h2 initial={{ opacity: 0, x: '-30%' }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className="text-white text-[32px] font-[500]">
+        Bookmarked Movies
+      </motion.h2>
 
       {data.map((data) => {
         if (data.category === 'Movie' && data.isBookmarked && data.title.includes(search)) countItems.push(data.title)
@@ -41,7 +45,9 @@ const BookmarkedMovies = () => {
         })}
       </div>
 
-      <h2 className="text-white text-[32px] font-[500]">Bookmarked TV Series</h2>
+      <motion.h2 initial={{ opacity: 0, x: '-30%' }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className="text-white text-[32px] font-[500]">
+        Bookmarked TV Series
+      </motion.h2>
 
       {data.map((data) => {
         if (data.category === 'TV Series' && data.isBookmarked && data.title.includes(search)) countSeries.push(data.title)

@@ -4,6 +4,8 @@ import data from '../constants/data.json'
 
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs'
 
+import { motion } from 'framer-motion'
+
 const TrendingCard = ({ bgImage, title, year, category, rating }) => (
   <div id="trending" style={{ backgroundImage: `url(${bgImage})` }} className={`${styles.paddingTrending} flex justify-between rounded-lg md:min-w-[470px] min-w-[240px] md:min-h-[230px] min-h-[140px] relative hover:cursor-pointer bg-black hover:opacity-70`}>
     <div className="flex flex-col justify-end">
@@ -47,7 +49,9 @@ const Trending = () => {
 
   return (
     <section className={`${styles.paddingSmall} flex flex-col gap-6 relative w-full`}>
-      <h2 className="text-white text-[32px] font-[500]">Trending</h2>
+      <motion.h2 initial={{ opacity: 0, x: '-30%' }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className="text-white text-[32px] font-[500]">
+        Trending
+      </motion.h2>
       <div className="flex flex-1">
         <div className="flex gap-8 scrollbar" ref={scrollRef}>
           {data.map((data) => {
