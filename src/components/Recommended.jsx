@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+
 import { styles } from '../constants';
 import data from '../constants/data.json';
 
 import { Card } from '../components';
 
-import { useSelector } from 'react-redux';
+import useGlobals from '../globals';
 
 import { motion } from 'framer-motion';
 
 const Recommended = () => {
-  const search = useSelector((state) => state.search);
+  const globals = useGlobals();
+  const search = globals.search;
 
   let countItems = [];
 
