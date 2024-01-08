@@ -16,7 +16,6 @@ const SearchBar = () => {
 
   useEffect(() => {
     globals.setSearch(value);
-    console.log(globals.search);
   }, [value]);
 
   return (
